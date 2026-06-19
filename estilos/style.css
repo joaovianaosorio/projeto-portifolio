@@ -277,6 +277,30 @@ footer a:hover{
 }
 
 @media screen and (min-width: 768px) {
+  main{
+    grid-template-columns: auto 300px 1fr auto;
+  }
+
+  section#ficha{
+    grid-column: 2 / 3;
+    height: fit-content; /*para ficar da altura do conteúdo na tela*/
+    position: sticky;
+    top: 65px; /*tamanho do header até o início da imagem*/
+  }
+
+  /*
+  A section#ficha acima, tem 300px de largura, logo, o gap entre os itens (<a>) na div#social deve diminuir, assim com o font-size deles. Caso contrário, ultrapassará facilmente os 300px causando overflowing. Diminui o tamanho da fonte para não correr risco também.
+  */
+
+  section#ficha div#social{
+    gap: 1em;
+    font-size: 1.4em;
+  }
+
+  section#detalhes{
+    grid-column: 3 / 4;
+  }
+  
   #skill-conteiner{
     grid-template-columns: 1fr 1fr;
   }
