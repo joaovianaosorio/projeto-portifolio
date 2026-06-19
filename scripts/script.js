@@ -23,10 +23,10 @@ botao.addEventListener('click', () => {
 });
 
 // Scroll suave para links de navegação
-const navLinks = document.querySelectorAll('#menu ul a.link');
+const navLinks = document.querySelectorAll('#menu ul a.link'); //esse comando funcionará para todos os links dentro de menu > ul com a classe "link"
 navLinks.forEach(link => {
   link.addEventListener('click', function(e) {
-    e.preventDefault();
+    e.preventDefault(); //evitar comportamento padrão
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
       const headerHeight = document.querySelector('header').offsetHeight;
